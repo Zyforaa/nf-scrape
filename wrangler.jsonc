@@ -12,7 +12,22 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	/**
+	 * KV Namespace for storing Netflix cookies
+	 * Create with: wrangler kv namespace create NETFLIX_KV
+	 */
+	"kv_namespaces": [
+		{
+			"binding": "NETFLIX_KV",
+			"id": "d2dd840057294ef28a364b413d13717d"
+		}
+	]
+	/**
+	 * Secrets (set via wrangler secret put)
+	 * API_KEY - Used to authenticate cookie update requests
+	 * Run: wrangler secret put API_KEY
+	 */
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
